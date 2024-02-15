@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombieAI : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject New_Piskel;
     public float speed;
     public float distanceBetween;
 
@@ -18,14 +18,14 @@ public class ZombieAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
+        distance = Vector2.Distance(transform.position, New_Piskel.transform.position);
+        Vector2 direction = New_Piskel.transform.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         if(distance < distanceBetween)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(this.transform.position, New_Piskel.transform.position, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
     }
