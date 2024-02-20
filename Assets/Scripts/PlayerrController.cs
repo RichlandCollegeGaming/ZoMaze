@@ -17,6 +17,11 @@ public class PlayerrController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
+        if (Input.GetKey(KeyCode.LeftShift))
+            movespeed = 10f;
+        else
+            movespeed = 5f;
+
         if (Input.GetMouseButtonDown(0))
         {
             weapon.Fire();
