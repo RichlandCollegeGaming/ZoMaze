@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class PointTowardsMouse : MonoBehaviour
 {
+    public Transform targetObject;
+
     void Update()
     {
-        PointObjectTowardsMouse();
+        PointToTarget();
     }
 
-    void PointObjectTowardsMouse()
+    void PointToTarget()
     {
-        // Get the mouse position in the world space
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+        if (targetObject != null)
         {
-            // Calculate the direction from the object to the mouse position
-            Vector3 lookDir = hit.point - transform.position;
+            // Calculate the direction from the object to the target object
+            Vector3 lookDir = targetObject.position - transform.position;
 
-            // Calculate the rotation to look towards the mouse
-            Quaternion rotation = Quaternion.LookRotation(lookDir, Vector3.up);
+            // Calculate the rotation angle based on the direction
+            float angleZ = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-            // Apply the rotation to the object
-            transform.rotation = rotation;
+            // Set the object's Z rotation to face the target object
+            transform.rotation = Quaternion.Euler(0f, 0f, angleZ);
+        }
+        else
+        {
+            Debug.LogWarning("Target object is not assigned.");
         }
     }
 }
+
 
 
