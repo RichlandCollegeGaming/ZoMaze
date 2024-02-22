@@ -183,7 +183,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132ce635587989247a8b430cc06183df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 4625904049549439317, guid: f7a24ba45bd54b148bc2b6287c3ade98, type: 3}
   Firepoint: {fileID: 587126423}
   fireForce: 20
 --- !u!1 &1085315682
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 5
   rb: {fileID: 1085315685}
-  weapon: {fileID: 0}
+  weapon: {fileID: 1629913446}
 --- !u!50 &1085315685
 Rigidbody2D:
   serializedVersion: 4

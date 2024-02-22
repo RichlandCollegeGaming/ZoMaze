@@ -10,8 +10,8 @@ public class PlayerWeapon : MonoBehaviour
 
     public void Fire()
     {
-        GameObject bullet = Instantiate(bulletPrefab, Firepoint.position, Firepoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(Firepoint.up * fireForce, ForceMode2D.Impulse);
+        GameObject Bullet = Instantiate(bulletPrefab, Firepoint.position, Firepoint.rotation);
+        Bullet.GetComponent<Rigidbody2D>().AddForce(Firepoint.up * fireForce, ForceMode2D.Impulse);
     }
 
 }
