@@ -11,8 +11,8 @@ public class PickUpController : MonoBehaviour
     {
         if(target.tag == "Player")
         {
-            target.GetComponent<PlayerrController>(). Weapon = Weapon;
-            target.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = Weapon.currentWeaponSpr;
+           // target.GetComponent<PlayerrController>(). Weapon = Weapon;
+           // target.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = Weapon.currentWeaponSpr;
             Destroy(gameObject);
         }
     }
