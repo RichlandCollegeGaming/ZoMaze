@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerrController : MonoBehaviour
 {
+    private float nextTimeOfFire = 0;
     public float movespeed = 5f;
     public Rigidbody2D rb;
-    public Weapon weapon;
-
+    public Weapon currentWeapon;
+    public GameObject bulllet;
 
     Vector2 moveDirection;
     Vector2 mousePosition;
@@ -24,7 +25,12 @@ public class PlayerrController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            weapon.Fire();
+            if(Time.time >= nextTimeOfFire)
+            {
+                currentWeapon.Fire();
+                //nextTimeOfFire = Time.time + 1 / currenteapon.fireRate;
+            }
+            
         }
 
         moveDirection = new Vector2(moveX, moveY).normalized;
