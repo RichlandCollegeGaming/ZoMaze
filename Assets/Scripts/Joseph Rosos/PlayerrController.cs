@@ -33,6 +33,7 @@ public class PlayerrController : MonoBehaviour
             
         }
 
+
         moveDirection = new Vector2(moveX, moveY).normalized;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }

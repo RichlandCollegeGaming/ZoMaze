@@ -9,6 +9,7 @@ public class PlayerWeapon : MonoBehaviour
     public Transform Firepoint;
     public float fireForce = 20f;
     public Sprite currentWeaponSpr;
+    
 
     public float fireRate = 1;
      public void Fire()
@@ -16,7 +17,6 @@ public class PlayerWeapon : MonoBehaviour
     GameObject Bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
      Bullet.GetComponent<Rigidbody2D>().AddForce(Firepoint.up * fireForce, ForceMode2D.Impulse);
      }
-    
-    
 
+   
 }

@@ -21,6 +21,11 @@ public class PlayerMovemnt : MonoBehaviour
         //HandleRotationInput();
 
         //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
+        if (Input.GetKey(KeyCode.LeftShift))
+            moveSpeed = 10f;
+        else
+            moveSpeed = 5f;
     }
 
     
