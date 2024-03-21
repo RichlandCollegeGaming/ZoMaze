@@ -28,8 +28,12 @@ public class PlayerrController : MonoBehaviour
             if(Time.time >= nextTimeOfFire)
             {
                 currentWeapon.Fire();
-                //nextTimeOfFire = Time.time + 1 / currenteapon.fireRate;
             }
+
+           // if (Input.GetKeyDown(KeyCode.R))
+            //{
+             //   Weapon.Reload();
+            //}
             
         }
 
@@ -39,13 +43,13 @@ public class PlayerrController : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(moveDirection.x * movespeed, moveDirection.y * movespeed);
+   // private void FixedUpdate()
+    //{
+      //  rb.velocity = new Vector2(moveDirection.x * movespeed, moveDirection.y * movespeed);
 
-        Vector2 aimDirection = mousePosition - rb.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = aimAngle;
-    }
+        //Vector2 aimDirection = mousePosition - rb.position;
+        //float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        //rb.rotation = aimAngle;
+   // }
 
 }
