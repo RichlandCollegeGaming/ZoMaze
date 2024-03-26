@@ -263,7 +263,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98838103}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9aaf9c68cece4234aa0fd027c5b8e26e, type: 3}
   m_Name: 
@@ -319,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -907.5, y: -313.06058}
+  m_AnchoredPosition: {x: -406, y: -316}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122044705
@@ -3578,7 +3578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c83f21f331521468738d35564ceb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlackRoom: {fileID: 0}
 --- !u!212 &344745855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4164,6 +4163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 20
+  maxHealth: 100
+  enemydamageAmount: 20
+  target: {fileID: 0}
 --- !u!1 &722356516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,6 +4928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 20
+  maxHealth: 100
+  enemydamageAmount: 20
+  target: {fileID: 0}
 --- !u!1 &1327687324
 GameObject:
   m_ObjectHideFlags: 0

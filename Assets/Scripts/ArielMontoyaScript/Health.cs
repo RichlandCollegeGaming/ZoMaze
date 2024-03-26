@@ -27,6 +27,17 @@ public class Health : MonoBehaviour
         UpdateHealthUI();
     }
 
+    // Method to heal the player
+    public void Heal(int healAmount)
+    {
+        currentHealth += healAmount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        UpdateHealthUI();
+    }
+
     void UpdateHealthUI()
     {
         healthText.text = "Health: " + currentHealth;
