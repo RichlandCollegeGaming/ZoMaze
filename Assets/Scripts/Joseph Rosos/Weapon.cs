@@ -6,40 +6,39 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Transform Firepoint;
+    public Transform firePoint;
     public float fireForce = 20f;
-    public Sprite currentWeaponSpr;
     public int currentClip, maxClipSize = 10, currentAmmo, maxAmmoSize = 100, ammoAmount;
-    
+    public float fireRate = 1f;
+    public float shootDelay = 0.2f; // Delay after shooting before next shot is allowed
+    private float nextFireTime = 0f;
 
-    public float fireRate = 1;
-     public void Fire()
-
-     {
-        if (currentClip > 0)
+    public void Fire()
+    {
+        if (Time.time >= nextFireTime && currentClip > 0)
         {
-
-
-            GameObject Bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
-            Bullet.GetComponent<Rigidbody2D>().AddForce(Firepoint.up * fireForce, ForceMode2D.Impulse);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
             currentClip--;
+            nextFireTime = Time.time + 1f / fireRate;
+            nextFireTime += shootDelay;
         }
-     }
+    }
+
     public void Reload()
     {
-        int reloadAmount = maxClipSize - currentClip; // how mnay bullets to refill clip
-        reloadAmount = (currentAmmo - reloadAmount >= 0 ? reloadAmount : currentAmmo);
+        int reloadAmount = maxClipSize - currentClip; // how many bullets to refill clip
+        reloadAmount = Mathf.Min(reloadAmount, currentAmmo); // Reload with available ammo
         currentClip += reloadAmount;
         currentAmmo -= reloadAmount;
     }
-   
+
     public void AddAmmo(int newAmount)
     {
-        currentAmmo += ammoAmount;
-        if(currentAmmo > maxAmmoSize)
+        currentAmmo += newAmount;
+        if (currentAmmo > maxAmmoSize)
         {
             currentAmmo = maxAmmoSize;
         }
-
     }
 }

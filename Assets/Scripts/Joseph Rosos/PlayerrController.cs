@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerrController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private float nextTimeOfFire = 0;
+    private bool isFiring = false; // Flag to track if the weapon is currently firing
     public float movespeed = 5f;
     public Rigidbody2D rb;
     public Weapon currentWeapon;
-    public GameObject bulllet;
+    public GameObject bullet;
 
     Vector2 moveDirection;
     Vector2 mousePosition;
@@ -23,33 +24,37 @@ public class PlayerrController : MonoBehaviour
         else
             movespeed = 5f;
 
-        if (Input.GetMouseButtonDown(0))
+        // Check if the player pressed the fire button and if the weapon is ready to fire
+        if (Input.GetMouseButtonDown(0) && !isFiring && Time.time >= nextTimeOfFire)
         {
-            if(Time.time >= nextTimeOfFire)
-            {
-                currentWeapon.Fire();
-            }
-
-           // if (Input.GetKeyDown(KeyCode.R))
-            //{
-             //   Weapon.Reload();
-            //}
-            
+            // Set the weapon as firing
+            isFiring = true;
+            // Fire the weapon
+            currentWeapon.Fire();
+            // Set the next allowed fire time based on the weapon's fire rate and delay
+           // nextTimeOfFire = Time.time + 1f / currentWeapon.fireRate;
+            // Reset the firing flag after a delay
+          //  StartCoroutine("ResetFiring", (currentWeapon.shootDelay));
         }
 
+       
 
         moveDirection = new Vector2(moveX, moveY).normalized;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(moveDirection.x * movespeed, moveDirection.y * movespeed);
 
-   // private void FixedUpdate()
-    //{
-      //  rb.velocity = new Vector2(moveDirection.x * movespeed, moveDirection.y * movespeed);
+        Vector2 aimDirection = mousePosition - rb.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = aimAngle;
+    }
 
-        //Vector2 aimDirection = mousePosition - rb.position;
-        //float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        //rb.rotation = aimAngle;
-   // }
-
+    // Method to reset the firing flag
+    private void ResetFiring()
+    {
+        isFiring = false;
+    }
 }
