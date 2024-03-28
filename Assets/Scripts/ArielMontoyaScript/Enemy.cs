@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     private int currentHealth;
     public int enemydamageAmount = 20; // Damage amount dealt by the bullet
     public Transform target;
-    private Rigidbody2D rb;
 
     private void GetTarget()
     {
@@ -18,55 +17,52 @@ public class Enemy : MonoBehaviour
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
-
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            Health playerHealth = other.GetComponent<Health>();
+            Health playerHealth = other.gameObject.GetComponent<Health>();
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(enemydamageAmount);
             }
         }
-        void Start()
-        {
-            rb = GetComponent<Rigidbody2D>();
-            currentHealth = maxHealth;
-        }
+    }
 
-        void OnTriggerEnter(Collider other)
-        {
-            // Check if the entering collider is a bullet
-            if (other.CompareTag("Bullet"))
-            {
-                // Deal damage to the enemy
-                TakeDamage(damageAmount);
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
 
-                // Destroy the bullet
-                Destroy(other.gameObject);
-            }
-        }
-
-        void TakeDamage(int damage)
+    void OnTriggerEnter(Collider other)
+    {
+        // Check if the entering collider is a bullet
+        if (other.CompareTag("Bullet"))
         {
-            currentHealth -= damage;
-            if (currentHealth <= 0)
-            {
-                currentHealth = 0;
-                Die();
-            }
-        }
+            // Deal damage to the enemy
+            TakeDamage(damageAmount);
 
-        void Die()
-        {
-            // Enemy death logic, such as playing death animation, awarding points, etc.
-            Destroy(gameObject);
+            // Destroy the bullet
+            Destroy(other.gameObject);
         }
     }
 
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
+    }
 
+    void Die()
+    {
+        // Enemy death logic, such as playing death animation, awarding points, etc.
+        Destroy(gameObject);
+    }
 }
 
