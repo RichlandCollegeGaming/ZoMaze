@@ -8,6 +8,8 @@ public class Zombie : MonoBehaviour
     public float speed = 3f;
     public float rotateSpeed = 0.0025f;
     private Rigidbody2D rb;
+    public Transform zombiePoint;
+    public GameObject BloodPrefab;
 
 
     void Start()
@@ -55,8 +57,10 @@ public class Zombie : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(other.gameObject);
+            GameObject Blood = Instantiate(BloodPrefab, target.position, target.rotation);
             target = null;
         } else if (other.gameObject.CompareTag("Bullet")){
+            GameObject Blood = Instantiate(BloodPrefab, zombiePoint.position, zombiePoint.rotation);
             Destroy(gameObject);
         }
     }
