@@ -15,17 +15,6 @@ public class Health : MonoBehaviour
         UpdateHealthUI();
     }
 
-    public void TakeDamage(int damageAmount)
-    {
-        currentHealth -= damageAmount;
-        if (currentHealth <= 0)
-        {
-            currentHealth = 0;
-            Debug.Log("Player died!");
-            // You can add more functionality here, like respawning the player.
-        }
-        UpdateHealthUI();
-    }
 
     // Method to heal the player
     public void Heal(int healAmount)
@@ -38,8 +27,26 @@ public class Health : MonoBehaviour
         UpdateHealthUI();
     }
 
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
+        UpdateHealthUI();
+    }
+
     void UpdateHealthUI()
     {
         healthText.text = "Health: " + currentHealth;
+    }
+
+    void Die()
+    {
+        // Enemy death logic, such as playing death animation, awarding points, etc.
+        Destroy(gameObject);
     }
 }

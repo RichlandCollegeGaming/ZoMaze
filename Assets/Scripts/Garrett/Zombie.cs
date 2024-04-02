@@ -52,7 +52,7 @@ public class Zombie : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    /*private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -63,5 +63,5 @@ public class Zombie : MonoBehaviour
             GameObject Blood = Instantiate(BloodPrefab, zombiePoint.position, zombiePoint.rotation);
             Destroy(gameObject);
         }
-    }
+    }*/
 }
