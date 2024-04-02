@@ -3468,7 +3468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c83f21f331521468738d35564ceb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlackRoom: {fileID: 0}
 --- !u!212 &344745855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3627,6 +3626,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 374017933}
   bulletPrefab: {fileID: 6103242139262421430, guid: c20287ca4f1f47949aea131bdc948b7e, type: 3}
+  fireForce: 20
+  currentClip: 0
+  maxClipSize: 10
+  currentAmmo: 0
+  maxAmmoSize: 100
+  ammoAmount: 0
+  fireRate: 1
+  shootDelay: 0.2
   bulletForce: 20
 --- !u!1 &399643829
 GameObject:
@@ -3698,6 +3705,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 399643834}
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
 --- !u!50 &399643832
 Rigidbody2D:
   serializedVersion: 4
@@ -4040,6 +4049,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 716252408}
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
 --- !u!1 &722356516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4086,6 +4097,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 722356517}
   bulletPrefab: {fileID: 6103242139262421430, guid: c20287ca4f1f47949aea131bdc948b7e, type: 3}
+  fireForce: 20
+  currentClip: 0
+  maxClipSize: 10
+  currentAmmo: 0
+  maxAmmoSize: 100
+  ammoAmount: 0
+  fireRate: 1
+  shootDelay: 0.2
   bulletForce: 20
 --- !u!1 &852535156
 GameObject:
@@ -4157,6 +4176,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 852535161}
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
 --- !u!50 &852535159
 Rigidbody2D:
   serializedVersion: 4
@@ -4321,6 +4342,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 866426436}
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
 --- !u!50 &866426434
 Rigidbody2D:
   serializedVersion: 4
@@ -4485,6 +4508,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 877941575}
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
 --- !u!50 &877941573
 Rigidbody2D:
   serializedVersion: 4
@@ -4694,6 +4719,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 1143804804}
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
 --- !u!50 &1143804802
 Rigidbody2D:
   serializedVersion: 4
@@ -4902,6 +4929,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1449899881}
   bulletPrefab: {fileID: 6103242139262421430, guid: c20287ca4f1f47949aea131bdc948b7e, type: 3}
+  fireForce: 20
+  currentClip: 0
+  maxClipSize: 10
+  currentAmmo: 0
+  maxAmmoSize: 100
+  ammoAmount: 0
+  fireRate: 1
+  shootDelay: 0.2
   bulletForce: 20
 --- !u!1 &1685233512
 GameObject:
@@ -4973,6 +5008,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 1685233517}
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
 --- !u!50 &1685233515
 Rigidbody2D:
   serializedVersion: 4
