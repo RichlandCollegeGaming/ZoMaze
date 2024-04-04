@@ -3632,8 +3632,7 @@ MonoBehaviour:
   currentAmmo: 0
   maxAmmoSize: 100
   ammoAmount: 0
-  fireRate: 1
-  shootDelay: 0.2
+  shootDelay: 1
   bulletForce: 20
 --- !u!1 &399643829
 GameObject:
@@ -4103,8 +4102,7 @@ MonoBehaviour:
   currentAmmo: 0
   maxAmmoSize: 100
   ammoAmount: 0
-  fireRate: 1
-  shootDelay: 0.2
+  shootDelay: 1
   bulletForce: 20
 --- !u!1 &852535156
 GameObject:
@@ -4935,8 +4933,7 @@ MonoBehaviour:
   currentAmmo: 0
   maxAmmoSize: 100
   ammoAmount: 0
-  fireRate: 1
-  shootDelay: 0.2
+  shootDelay: 1
   bulletForce: 20
 --- !u!1 &1685233512
 GameObject:
