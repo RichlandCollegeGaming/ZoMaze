@@ -3364,6 +3364,23 @@ MonoBehaviour:
   maxHealth: 100
   enemydamageAmount: 20
   target: {fileID: 0}
+--- !u!114 &372827021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372827011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiemaxHealth: 100
+  zombiecurrentHealth: 0
+  zombiedamageAmount: 20
+  BloodPrefab: {fileID: 0}
+  zombiePoint: {fileID: 0}
 --- !u!1 &399643829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,6 +3731,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1388346080}
+    - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1388346085}
   m_SourcePrefab: {fileID: 100100000, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
 --- !u!1 &610194792
 GameObject:
@@ -6670,6 +6690,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1560479194}
+    - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1560479199}
   m_SourcePrefab: {fileID: 100100000, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
 --- !u!1 &958502446
 GameObject:
@@ -10554,6 +10577,7 @@ GameObject:
   - component: {fileID: 1143804802}
   - component: {fileID: 1143804801}
   - component: {fileID: 1143804800}
+  - component: {fileID: 1143804805}
   m_Layer: 0
   m_Name: ZombieBasic (1)
   m_TagString: Untagged
@@ -10707,6 +10731,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1143804805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143804799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiemaxHealth: 100
+  zombiecurrentHealth: 0
+  zombiedamageAmount: 100
+  BloodPrefab: {fileID: 0}
+  zombiePoint: {fileID: 0}
 --- !u!1 &1182456191
 GameObject:
   m_ObjectHideFlags: 0
@@ -11001,6 +11042,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2109440452}
+    - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109440457}
   m_SourcePrefab: {fileID: 100100000, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
 --- !u!1 &1343038414
 GameObject:
@@ -11091,6 +11135,23 @@ MonoBehaviour:
   maxHealth: 100
   enemydamageAmount: 20
   target: {fileID: 0}
+--- !u!114 &1388346085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275127386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiemaxHealth: 100
+  zombiecurrentHealth: 0
+  zombiedamageAmount: 20
+  BloodPrefab: {fileID: 0}
+  zombiePoint: {fileID: 0}
 --- !u!4 &1560479189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6942252909420590438, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
@@ -11112,6 +11173,23 @@ MonoBehaviour:
   maxHealth: 100
   enemydamageAmount: 20
   target: {fileID: 0}
+--- !u!114 &1560479199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559857989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiemaxHealth: 100
+  zombiecurrentHealth: 0
+  zombiedamageAmount: 20
+  BloodPrefab: {fileID: 0}
+  zombiePoint: {fileID: 0}
 --- !u!4 &1560590911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6942252909420590438, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
@@ -11133,6 +11211,23 @@ MonoBehaviour:
   maxHealth: 100
   enemydamageAmount: 20
   target: {fileID: 0}
+--- !u!114 &1560590921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898645156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiemaxHealth: 100
+  zombiecurrentHealth: 0
+  zombiedamageAmount: 100
+  BloodPrefab: {fileID: 0}
+  zombiePoint: {fileID: 0}
 --- !u!1 &1685233512
 GameObject:
   m_ObjectHideFlags: 0
@@ -11567,6 +11662,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
       insertIndex: -1
       addedObject: {fileID: 372827016}
+    - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 372827021}
   m_SourcePrefab: {fileID: 100100000, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
 --- !u!1 &1952948132
 GameObject:
@@ -11686,6 +11784,23 @@ MonoBehaviour:
   maxHealth: 100
   enemydamageAmount: 20
   target: {fileID: 0}
+--- !u!114 &2109440457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109440447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiemaxHealth: 100
+  zombiecurrentHealth: 0
+  zombiedamageAmount: 20
+  BloodPrefab: {fileID: 0}
+  zombiePoint: {fileID: 0}
 --- !u!1001 &1189666844480491570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11940,6 +12055,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1560590916}
+    - targetCorrespondingSourceObject: {fileID: 1901081642027023102, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1560590921}
   m_SourcePrefab: {fileID: 100100000, guid: cc92a41ec9c6b2d40b3285967ffa6475, type: 3}
 --- !u!1001 &2347114989359521806
 PrefabInstance:
@@ -12201,6 +12319,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3634065574967185555, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
+      propertyPath: fireRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634065574967185555, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
+      propertyPath: ammoAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3987135157923331944, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -12255,6 +12381,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3987135157923331944, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205844072483059534, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
+      propertyPath: fireRate
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205844072483059534, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
+      propertyPath: shootDelay
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205844072483059534, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
+      propertyPath: currentAmmo
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205844072483059534, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}
+      propertyPath: currentClip
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8898388565910365217, guid: 82cbdbf4d2ac8b84ca3f980faa55ebc8, type: 3}

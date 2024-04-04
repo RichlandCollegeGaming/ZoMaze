@@ -30,39 +30,5 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-
-    void Start()
-    {
-        currentHealth = maxHealth;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        // Check if the entering collider is a bullet
-        if (other.CompareTag("Bullet"))
-        {
-            // Deal damage to the enemy
-            TakeDamage(damageAmount);
-
-            // Destroy the bullet
-            Destroy(other.gameObject);
-        }
-    }
-
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
-        {
-            currentHealth = 0;
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        // Enemy death logic, such as playing death animation, awarding points, etc.
-        Destroy(gameObject);
-    }
 }
 
