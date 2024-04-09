@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6728328940696238665}
   - component: {fileID: 9124220373482140918}
   - component: {fileID: 2950270654544942210}
+  - component: {fileID: 3728992130168038238}
+  - component: {fileID: 2865482420536916052}
   m_Layer: 0
   m_Name: ZombieBasic
   m_TagString: Untagged
@@ -129,6 +131,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 5
   rotateSpeed: 1
+  zombiePoint: {fileID: 0}
+  BloodPrefab: {fileID: 0}
 --- !u!58 &2950270654544942210
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +168,36 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.19}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &3728992130168038238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901081642027023102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74e365b9adfe304db75f277868951ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 20
+  maxHealth: 100
+  enemydamageAmount: 20
+  target: {fileID: 0}
+--- !u!114 &2865482420536916052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901081642027023102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiemaxHealth: 100
+  zombiecurrentHealth: 0
+  zombiedamageAmount: 20
+  BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
+  zombiePoint: {fileID: 0}
