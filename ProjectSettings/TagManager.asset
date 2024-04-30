@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bullet
   - Weapon
+  - Pistol
+  - MG
+  - Shotgun
   layers:
   - Default
   - TransparentFX

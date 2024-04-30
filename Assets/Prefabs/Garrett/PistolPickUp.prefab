@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2186958698827945860}
   - component: {fileID: 5951861079865071467}
   - component: {fileID: 1043099068125935815}
-  - component: {fileID: 5442229026817295134}
+  - component: {fileID: 2169452311280747402}
   m_Layer: 0
   m_Name: PistolPickUp
-  m_TagString: Untagged
+  m_TagString: Pistol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5951861079865071467
 SpriteRenderer:
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.75
---- !u!114 &5442229026817295134
+--- !u!114 &2169452311280747402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,10 +130,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3289863520114351405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea75c5ecc64936a419e5a18cf8bf653f, type: 3}
+  m_Script: {fileID: 11500000, guid: 885d5d66bda7bf841b6af1eacf1f61d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToToggleOn: {fileID: 0}
-  objectsToToggleOff:
-  - {fileID: 0}
-  - {fileID: 0}

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3921614195688661757}
   - component: {fileID: 7431863341981018417}
   - component: {fileID: 6662982982473488514}
-  - component: {fileID: 4099060519712878330}
+  - component: {fileID: 6804846511914769887}
   m_Layer: 0
   m_Name: MGPickUp
-  m_TagString: Untagged
+  m_TagString: MG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.75
---- !u!114 &4099060519712878330
+--- !u!114 &6804846511914769887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,10 +130,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3164721718203721682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea75c5ecc64936a419e5a18cf8bf653f, type: 3}
+  m_Script: {fileID: 11500000, guid: 885d5d66bda7bf841b6af1eacf1f61d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToToggleOn: {fileID: 0}
-  objectsToToggleOff:
-  - {fileID: 0}
-  - {fileID: 0}

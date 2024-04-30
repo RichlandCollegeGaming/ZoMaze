@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3627d20f89865994c9ddf3603f1811e8
+  - enabled: 1
+    path: Assets/Scenes/Street-2.unity
+    guid: 6bb260d4f83d43f4a96aabf72bf5e3eb
+  - enabled: 1
+    path: Assets/Scenes/Prison.unity
+    guid: 6ef15e985b2c820409f4333e7672a8b5
+  - enabled: 1
+    path: Assets/Scenes/hospital.unity
+    guid: 5c0ee6d67b64e844586b00b2d3c1113e
+  - enabled: 1
+    path: Assets/Scenes/Rooftop.unity
+    guid: ede54cff3c46a3941b9c6bb9072a3959
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: d52673009d02c484ba2094cfe353e02f
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: f5df700652cde1a45853218b3ef056db
   m_configObjects: {}

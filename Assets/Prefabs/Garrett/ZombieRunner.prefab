@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3143566804225195327
 SpriteRenderer:
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c713f98e75e13224fa3343797716d084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiemaxHealth: 100
+  zombiemaxHealth: 50
   zombiecurrentHealth: 0
   zombiedamageAmount: 20
   BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
