@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -8,13 +9,13 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public Text healthText;
+    [SerializeField] private GameObject WholePlayer;
 
-    void Start()
+     void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthUI();
     }
-
 
     // Method to heal the player
     public void Heal(int healAmount)
@@ -26,7 +27,6 @@ public class Health : MonoBehaviour
         }
         UpdateHealthUI();
     }
-
 
     public void TakeDamage(int damage)
     {
@@ -46,7 +46,8 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        // Enemy death logic, such as playing death animation, awarding points, etc.
-        Destroy(gameObject);
+        // Load a scene named "GameOver" when the player dies
+        Destroy(WholePlayer);
+        SceneManager.LoadScene("DeathScreen");
     }
 }
