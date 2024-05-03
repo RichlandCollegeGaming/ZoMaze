@@ -200,4 +200,4 @@ MonoBehaviour:
   zombiecurrentHealth: 0
   zombiedamageAmount: 20
   BloodPrefab: {fileID: 6792750667310812441, guid: 901e63586d7a7c24c8b5f38d1b2f666c, type: 3}
-  zombiePoint: {fileID: 0}
+  zombiePoint: {fileID: 6942252909420590438}
