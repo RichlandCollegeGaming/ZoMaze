@@ -133,3 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885d5d66bda7bf841b6af1eacf1f61d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoundPrefab: {fileID: 4645960257067401910, guid: 8d2f5886e50401c41a6d9ef26d3fd10a, type: 3}
+  PickUpPoint: {fileID: 2186958698827945860}
