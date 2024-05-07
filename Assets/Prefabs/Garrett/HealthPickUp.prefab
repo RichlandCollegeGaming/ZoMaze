@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4477988197614710996
 SpriteRenderer:
@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemydamageAmount: -20
+  SoundPrefab: {fileID: 1623981545463186672, guid: b23844f81d9f65541bde819c77489e21, type: 3}
+  PickUpPoint: {fileID: 8117800880838092858}
 --- !u!58 &5550730220614473732
 CircleCollider2D:
   m_ObjectHideFlags: 0

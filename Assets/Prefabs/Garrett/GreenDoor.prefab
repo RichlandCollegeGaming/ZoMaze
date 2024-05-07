@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 7786314302387181217}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &92205572076639107
 BoxCollider2D:
@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 1
+  SoundPrefab: {fileID: 6128814180330337792, guid: d740229527ab4c746a073973518d7866, type: 3}
+  PickUpPoint: {fileID: 7600102904794987431}
 --- !u!1 &4289897189697915004
 GameObject:
   m_ObjectHideFlags: 0

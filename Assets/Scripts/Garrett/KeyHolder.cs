@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class KeyHolder : MonoBehaviour
 {
+
+    public GameObject SoundPrefab;
+    public Transform PickUpPoint;
     private List<Key.KeyType> keyList;
 
     private void Awake()
@@ -33,6 +36,7 @@ public class KeyHolder : MonoBehaviour
         if (key != null)
         {
             AddKey(key.GetKeyType());
+            GameObject Audio = Instantiate(SoundPrefab, PickUpPoint.position, PickUpPoint.rotation);
             Destroy(key.gameObject);
         }
 

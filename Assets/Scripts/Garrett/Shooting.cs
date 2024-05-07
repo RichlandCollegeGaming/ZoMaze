@@ -10,8 +10,16 @@ public class Shooting : MonoBehaviour
     //public int currentClip, maxClipSize = 10, currentAmmo, maxAmmoSize = 100, ammoAmount;
     public float shootDelay = 0.5f; // Short delay after shooting before next shot is allowed
     public static bool canShoot = true; // Flag to check if the gun can shoot
+    public AudioClip shootSound;
 
     public float bulletForce = 1000f;
+
+    private AudioSource audioSource; // Reference to AudioSource component
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>(); // Get AudioSource component
+    }
 
     private void Update()
     {
@@ -34,19 +42,17 @@ public class Shooting : MonoBehaviour
 
     void Shoot(Transform firePoint)
     {
+        // Instantiate bullet
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-    }
 
-    /*
-    public void Fire()
-    {
-        if (canShoot && currentClip > 0)
+        // Play shoot sound
+        if (audioSource != null && shootSound != null)
         {
-            StartCoroutine(ShootWithDelay());
+            audioSource.PlayOneShot(shootSound);
         }
     }
-    */
+
 }
 
